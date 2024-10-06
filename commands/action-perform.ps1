@@ -1,3 +1,3 @@
 Write-Output 'Action started'
-python src/perform_action.py
+python src/action_perform.py
 Write-Output 'Action finished'

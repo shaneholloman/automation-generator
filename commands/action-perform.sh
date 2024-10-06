@@ -1,5 +1,5 @@
 #!/bin/bash
 
 echo 'Action started'
-python src/perform_action.py
+python src/action_perform.py
 echo 'Action finished'

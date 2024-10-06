@@ -17,7 +17,7 @@ sh commands/install-python-dependencies.sh
 1. Start the watch mode by running the following command. This command will activate the program to monitor mouse clicks and keyboard typing.
 
     ```sh
-    sh commands/watch.sh
+    sh commands/action-watch.sh
     ```
 
 2. Perform the actions you want to automate. The program will track your mouse clicks and keyboard inputs.
@@ -27,5 +27,5 @@ sh commands/install-python-dependencies.sh
 4. To execute the stored actions, run the following command. This command will read the stored actions from the log file and perform the steps that were previously done by the user.
 
     ```sh
-    sh commands/perform-action.sh
+    sh commands/action-perform.sh
     ```
