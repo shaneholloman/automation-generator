@@ -1,6 +1,6 @@
 # automation-generator
 
-> CodeMap Source: Local directory: `/home/shadmin/_github/automation-generator` By: shaneholloman
+> CodeMap Source: Local directory: `/home/shadmin/_github/automation-generator`
 
 This markdown document provides a comprehensive overview of the directory structure and file contents. It aims to give viewers (human or AI) a complete view of the codebase in a single file for easy analysis.
 
@@ -16,8 +16,8 @@ The table of contents below is for navigational convenience and reflects this do
   - [Repo File Contents](#repo-file-contents)
     - [kickstart.sh](#kickstartsh)
     - [vscode-conda-troubleshooting.md](#vscode-conda-troubleshootingmd)
-    - [README.MD](#readmemd)
-  - [How to Use This Tool](#how-to-use-this-tool)
+    - [README.md](#readmemd)
+    - [commands/action-perform.sh](#commandsaction-performsh)
     - [commands/action-watch.sh](#commandsaction-watchsh)
     - [commands/install-python-dependencies.sh](#commandsinstall-python-dependenciessh)
     - [commands/action-perform.ps1](#commandsaction-performps1)
@@ -48,7 +48,7 @@ This file tree represents the actual structure of the repository. It's crucial f
 │   │   └── input_log.csv
 │   ├── action_perform.py
 │   └── action_watch.py
-├── README.MD
+├── README.md
 ├── kickstart.sh
 └── vscode-conda-troubleshooting.md
 
@@ -251,10 +251,13 @@ fi
 Remember: Always ensure you're working in the correct environment before installing packages or running your code!
 ````
 
-### README.MD
+### README.md
 
-```markdown
+````markdown
 # Automation Generator
+
+> [!TIP]
+> Concept kickstart. Intention is to add multiple tasks to automate.
 
 This tool allows you to automate actions based on mouse clicks and keyboard inputs.
 
@@ -285,8 +288,7 @@ sh commands/install-python-dependencies.sh
     ```sh
     sh commands/action-perform.sh
     ```
-
-```
+````
 
 ### commands/action-perform.sh
 
