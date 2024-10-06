@@ -1,5 +1,8 @@
 # Automation Generator
 
+> [!TIP]
+> Concept kickstart. Intention is to add multiple tasks to automate.
+
 This tool allows you to automate actions based on mouse clicks and keyboard inputs.
 
 ## Prerequisites
