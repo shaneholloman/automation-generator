@@ -14,19 +14,29 @@ The table of contents below is for navigational convenience and reflects this do
   - [Document Table of Contents](#document-table-of-contents)
   - [Repo File Tree](#repo-file-tree)
   - [Repo File Contents](#repo-file-contents)
-    - [\_codemaps/automation-generator\_codemap.md](#_codemapsautomation-generator_codemapmd)
-    - [commands/action-perform.ps1](#commandsaction-performps1)
-    - [commands/action-perform.sh](#commandsaction-performsh)
-    - [commands/action-watch.ps1](#commandsaction-watchps1)
-    - [commands/action-watch.sh](#commandsaction-watchsh)
-    - [commands/install-python-dependencies.ps1](#commandsinstall-python-dependenciesps1)
-    - [commands/install-python-dependencies.sh](#commandsinstall-python-dependenciessh)
     - [kickstart.sh](#kickstartsh)
+    - [vscode-conda-troubleshooting.md](#vscode-conda-troubleshootingmd)
     - [README.MD](#readmemd)
+  - [How to Use This Tool](#how-to-use-this-tool)
+    - [commands/action-watch.sh](#commandsaction-watchsh)
+    - [commands/install-python-dependencies.sh](#commandsinstall-python-dependenciessh)
+    - [commands/action-perform.ps1](#commandsaction-performps1)
+    - [commands/install-python-dependencies.ps1](#commandsinstall-python-dependenciesps1)
+    - [commands/action-watch.ps1](#commandsaction-watchps1)
     - [src/action\_perform.py](#srcaction_performpy)
     - [src/action\_watch.py](#srcaction_watchpy)
     - [src/logs/input\_log.csv](#srclogsinput_logcsv)
-    - [vscode-conda-troubleshooting.md](#vscode-conda-troubleshootingmd)
+    - [\_codemaps/automation-generator\_codemap.md](#_codemapsautomation-generator_codemapmd)
+    - [README.MD](#readmemd-1)
+  - [How to Use This Tool](#how-to-use-this-tool-1)
+    - [commands/action-watch.sh](#commandsaction-watchsh-1)
+    - [commands/install-python-dependencies.sh](#commandsinstall-python-dependenciessh-1)
+    - [commands/action-perform.ps1](#commandsaction-performps1-1)
+    - [commands/install-python-dependencies.ps1](#commandsinstall-python-dependenciesps1-1)
+    - [commands/action-watch.ps1](#commandsaction-watchps1-1)
+    - [src/action\_perform.py](#srcaction_performpy-1)
+    - [src/action\_watch.py](#srcaction_watchpy-1)
+    - [src/logs/input\_log.csv](#srclogsinput_logcsv-1)
 
 <!-- /TOC -->
 
@@ -287,6 +297,7 @@ sh commands/install-python-dependencies.sh
     ```sh
     sh commands/action-perform.sh
     ```
+
 ```
 
 ### commands/action-perform.sh
@@ -987,6 +998,7 @@ False,,,g,0.23065757751464844
 ```
 
 > This concludes the repository's file contents. Please review thoroughly for a comprehensive understanding of the codebase.
+
 ````
 
 > This concludes the repository's file contents. Please review thoroughly for a comprehensive understanding of the codebase.
