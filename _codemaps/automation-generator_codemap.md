@@ -17,8 +17,11 @@ The table of contents below is for navigational convenience and reflects this do
     - [kickstart.sh](#kickstartsh)
     - [vscode-conda-troubleshooting.md](#vscode-conda-troubleshootingmd)
     - [README.MD](#readmemd)
-  - [How to Use This Program](#how-to-use-this-program)
+  - [How to Use This Tool](#how-to-use-this-tool)
+    - [commands/perform\_action.ps1](#commandsperform_actionps1)
+    - [commands/watch.ps1](#commandswatchps1)
     - [commands/perform\_action.sh](#commandsperform_actionsh)
+    - [commands/install\_python-dependencies.ps1](#commandsinstall_python-dependenciesps1)
     - [commands/install\_python\_dependencies.sh](#commandsinstall_python_dependenciessh)
     - [src/perform\_action.py](#srcperform_actionpy)
     - [src/watch.py](#srcwatchpy)
@@ -32,9 +35,13 @@ This file tree represents the actual structure of the repository. It's crucial f
 
 ```tree
 .
+├── _codemaps/
 ├── commands/
+│   ├── install_python-dependencies.ps1
 │   ├── install_python_dependencies.sh
+│   ├── perform_action.ps1
 │   ├── perform_action.sh
+│   ├── watch.ps1
 │   └── watch.sh
 ├── src/
 │   ├── logs/
@@ -45,7 +52,7 @@ This file tree represents the actual structure of the repository. It's crucial f
 ├── kickstart.sh
 └── vscode-conda-troubleshooting.md
 
-3 directories, 9 files
+4 directories, 12 files
 ```
 
 ## Repo File Contents
@@ -249,7 +256,7 @@ Remember: Always ensure you're working in the correct environment before install
 ```markdown
 # Automation Generator
 
-This program allows you to automate actions based on mouse clicks and keyboard inputs.
+This tool allows you to automate actions based on mouse clicks and keyboard inputs.
 
 ## Prerequisites
 
@@ -258,10 +265,10 @@ Make sure you have the latest version of Python installed on your machine.
 To install the required dependencies, run the following command:
 
 ```sh
-sh commands/install_python_dependencies.sh
+sh commands/install-python-dependencies.sh
 ```
 
-## How to Use This Program
+## How to Use This Tool
 
 1. Start the watch mode by running the following command. This command will activate the program to monitor mouse clicks and keyboard typing.
 
@@ -276,7 +283,7 @@ sh commands/install_python_dependencies.sh
 4. To execute the stored actions, run the following command. This command will read the stored actions from the log file and perform the steps that were previously done by the user.
 
     ```sh
-    sh commands/perform_action.sh
+    sh commands/perform-action.sh
     ```
 
 ```
@@ -294,6 +301,25 @@ python src/watch.py
 echo 'Automation stored successfully'
 ```
 
+### commands/perform_action.ps1
+
+```powershell
+Write-Output 'Action started'
+python src/perform_action.py
+Write-Output 'Action finished'
+```
+
+### commands/watch.ps1
+
+```powershell
+Remove-Item src/logs/input_log.csv -ErrorAction Ignore
+New-Item -ItemType File -Path src/logs/input_log.csv | Out-Null
+Write-Output 'Watching actions...'
+Write-Output 'Press ESC + mouse click to stop'
+python src/watch.py
+Write-Output 'Automation stored successfully'
+```
+
 ### commands/perform_action.sh
 
 ```bash
@@ -302,6 +328,12 @@ echo 'Automation stored successfully'
 echo 'Action started'
 python src/perform_action.py
 echo 'Action finished'
+```
+
+### commands/install_python-dependencies.ps1
+
+```powershell
+pip install pynput pyautogui
 ```
 
 ### commands/install_python_dependencies.sh
