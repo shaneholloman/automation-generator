@@ -1,6 +1,6 @@
 # automation-generator
 
-> CodeMap Source: Local directory: `/home/shadmin/_github/automation-generator`
+> CodeMap Source: Local directory: `C:\Users\shane\Dropbox\shane\git\_github\automation-generator`
 
 This markdown document provides a comprehensive overview of the directory structure and file contents. It aims to give viewers (human or AI) a complete view of the codebase in a single file for easy analysis.
 
@@ -14,16 +14,17 @@ The table of contents below is for navigational convenience and reflects this do
   - [Document Table of Contents](#document-table-of-contents)
   - [Repo File Tree](#repo-file-tree)
   - [Repo File Contents](#repo-file-contents)
+    - [.gitignore](#gitignore)
     - [kickstart.sh](#kickstartsh)
-    - [vscode-conda-troubleshooting.md](#vscode-conda-troubleshootingmd)
     - [README.md](#readmemd)
     - [todo.md](#todomd)
-    - [commands/action-perform.sh](#commandsaction-performsh)
-    - [commands/action-watch.sh](#commandsaction-watchsh)
-    - [commands/install-python-dependencies.sh](#commandsinstall-python-dependenciessh)
+    - [vscode-conda-troubleshooting.md](#vscode-conda-troubleshootingmd)
     - [commands/action-perform.ps1](#commandsaction-performps1)
-    - [commands/install-python-dependencies.ps1](#commandsinstall-python-dependenciesps1)
+    - [commands/action-perform.sh](#commandsaction-performsh)
     - [commands/action-watch.ps1](#commandsaction-watchps1)
+    - [commands/action-watch.sh](#commandsaction-watchsh)
+    - [commands/install-python-dependencies.ps1](#commandsinstall-python-dependenciesps1)
+    - [commands/install-python-dependencies.sh](#commandsinstall-python-dependenciessh)
     - [src/action\_perform.py](#srcaction_performpy)
     - [src/action\_watch.py](#srcaction_watchpy)
     - [src/logs/input\_log.csv](#srclogsinput_logcsv)
@@ -49,17 +50,185 @@ This file tree represents the actual structure of the repository. It's crucial f
 │   │   └── input_log.csv
 │   ├── action_perform.py
 │   └── action_watch.py
+├── .gitignore
 ├── README.md
 ├── kickstart.sh
 ├── todo.md
 └── vscode-conda-troubleshooting.md
 
-4 directories, 13 files
+4 directories, 14 files
 ```
 
 ## Repo File Contents
 
 The following sections present the content of each file in the repository. Large and binary files are acknowledged but their contents are not displayed.
+
+### .gitignore
+
+```ini
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/latest/usage/project/#working-with-version-control
+.pdm.toml
+.pdm-python
+.pdm-build/
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+#.idea/
+```
 
 ### kickstart.sh
 
@@ -128,8 +297,8 @@ done
 
 # Tag and push after setting the secrets
 commitMessage="tagging first version"
-tagVersion="2.0.0"
-tagMessage="An Ansible role model template only"
+tagVersion="v0.0.1"
+tagMessage="... kicking off the project"
 
 git commit --allow-empty -m "$commitMessage"
 git tag -a $tagVersion -m "$tagMessage"
@@ -147,6 +316,68 @@ else
   echo "Please edit the git tag and message in this script."
 fi
 ```
+
+### README.md
+
+````markdown
+# Automation Generator
+
+> [!TIP]
+> Concept kickstart. Intention is to add multiple tasks to automate.
+
+This tool allows you to automate actions based on mouse clicks and keyboard inputs.
+
+## Prerequisites
+
+Make sure you have the latest version of Python installed on your machine.
+
+To install the required dependencies, run the following command:
+
+```sh
+sh commands/install-python-dependencies.sh
+```
+
+## How to Use This Tool
+
+1. Start the watch mode by running the following command. This command will activate the program to monitor mouse clicks and keyboard typing.
+
+    ```sh
+    sh commands/action-watch.sh
+    ```
+
+2. Perform the actions you want to automate. The program will track your mouse clicks and keyboard inputs.
+
+3. To stop the watch mode and store the recorded actions, press the ESC key along with a mouse click. This action will trigger the program to save the information in a log file.
+
+4. To execute the stored actions, run the following command. This command will read the stored actions from the log file and perform the steps that were previously done by the user.
+
+    ```sh
+    sh commands/action-perform.sh
+    ```
+````
+
+### todo.md
+
+````markdown
+# TODO
+
+## Chores
+
+- [ ] Refactor log location and name - pull outta the src directory
+- [ ] Add CI
+
+## Features
+
+Ideas to begin with:
+
+- [ ] capture windows or screens
+- [ ] organize files based on opencv
+- [ ] organize files based on tesseract
+- [ ] organize files based on on ollama
+- [ ] perform actions based on opencv
+- [ ] perform actions based on tesseract
+- [ ] perform actions based on ollama
+````
 
 ### vscode-conda-troubleshooting.md
 
@@ -253,52 +484,13 @@ fi
 Remember: Always ensure you're working in the correct environment before installing packages or running your code!
 ````
 
-### README.md
+### commands/action-perform.ps1
 
-````markdown
-# Automation Generator
-
-> [!TIP]
-> Concept kickstart. Intention is to add multiple tasks to automate.
-
-This tool allows you to automate actions based on mouse clicks and keyboard inputs.
-
-## Prerequisites
-
-Make sure you have the latest version of Python installed on your machine.
-
-To install the required dependencies, run the following command:
-
-```sh
-sh commands/install-python-dependencies.sh
+```powershell
+Write-Output 'Action started'
+python src/action_perform.py
+Write-Output 'Action finished'
 ```
-
-## How to Use This Tool
-
-1. Start the watch mode by running the following command. This command will activate the program to monitor mouse clicks and keyboard typing.
-
-    ```sh
-    sh commands/action-watch.sh
-    ```
-
-2. Perform the actions you want to automate. The program will track your mouse clicks and keyboard inputs.
-
-3. To stop the watch mode and store the recorded actions, press the ESC key along with a mouse click. This action will trigger the program to save the information in a log file.
-
-4. To execute the stored actions, run the following command. This command will read the stored actions from the log file and perform the steps that were previously done by the user.
-
-    ```sh
-    sh commands/action-perform.sh
-    ```
-````
-
-### todo.md
-
-````markdown
-# TODO
-
-- [ ] Refactor log location and name - pull outta the src directory
-````
 
 ### commands/action-perform.sh
 
@@ -308,6 +500,17 @@ sh commands/install-python-dependencies.sh
 echo 'Action started'
 python src/action_perform.py
 echo 'Action finished'
+```
+
+### commands/action-watch.ps1
+
+```powershell
+Remove-Item src/logs/input_log.csv -ErrorAction Ignore
+New-Item -ItemType File -Path src/logs/input_log.csv | Out-Null
+Write-Output 'Watching actions...'
+Write-Output 'Press ESC + mouse click to stop'
+python src/action_watch.py
+Write-Output 'Automation stored successfully'
 ```
 
 ### commands/action-watch.sh
@@ -323,37 +526,18 @@ python src/action_watch.py
 echo 'Automation stored successfully'
 ```
 
-### commands/install-python-dependencies.sh
-
-```bash
-#!/bin/bash
-
-pip install pynput pyautogui
-```
-
-### commands/action-perform.ps1
-
-```powershell
-Write-Output 'Action started'
-python src/action_perform.py
-Write-Output 'Action finished'
-```
-
 ### commands/install-python-dependencies.ps1
 
 ```powershell
 pip install pynput pyautogui
 ```
 
-### commands/action-watch.ps1
+### commands/install-python-dependencies.sh
 
-```powershell
-Remove-Item src/logs/input_log.csv -ErrorAction Ignore
-New-Item -ItemType File -Path src/logs/input_log.csv | Out-Null
-Write-Output 'Watching actions...'
-Write-Output 'Press ESC + mouse click to stop'
-python src/action_watch.py
-Write-Output 'Automation stored successfully'
+```bash
+#!/bin/bash
+
+pip install pynput pyautogui
 ```
 
 ### src/action_perform.py
