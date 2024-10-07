@@ -17,6 +17,7 @@ The table of contents below is for navigational convenience and reflects this do
     - [kickstart.sh](#kickstartsh)
     - [vscode-conda-troubleshooting.md](#vscode-conda-troubleshootingmd)
     - [README.md](#readmemd)
+    - [todo.md](#todomd)
     - [commands/action-perform.sh](#commandsaction-performsh)
     - [commands/action-watch.sh](#commandsaction-watchsh)
     - [commands/install-python-dependencies.sh](#commandsinstall-python-dependenciessh)
@@ -50,9 +51,10 @@ This file tree represents the actual structure of the repository. It's crucial f
 │   └── action_watch.py
 ├── README.md
 ├── kickstart.sh
+├── todo.md
 └── vscode-conda-troubleshooting.md
 
-4 directories, 12 files
+4 directories, 13 files
 ```
 
 ## Repo File Contents
@@ -288,6 +290,14 @@ sh commands/install-python-dependencies.sh
     ```sh
     sh commands/action-perform.sh
     ```
+````
+
+### todo.md
+
+````markdown
+# TODO
+
+- [ ] Refactor log location and name - pull outta the src directory
 ````
 
 ### commands/action-perform.sh
