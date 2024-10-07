@@ -62,8 +62,8 @@ done
 
 # Tag and push after setting the secrets
 commitMessage="tagging first version"
-tagVersion="2.0.0"
-tagMessage="An Ansible role model template only"
+tagVersion="v0.0.1"
+tagMessage="... kicking off the project"
 
 git commit --allow-empty -m "$commitMessage"
 git tag -a $tagVersion -m "$tagMessage"
